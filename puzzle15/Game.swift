@@ -9,22 +9,41 @@
 import Foundation
 
 class Game {
-    var correctSolution = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15",""]
-    var gameBoard: [[String]] = Array(repeating: Array(repeating: "", count: 4), count: 4)
+    var boardWidth: Int
+    var boardHeight: Int
+    
+    var correctSolution: [String]
+    var gameBoard: [[String]]
+
+    init(width: Int, height: Int) {
+        self.boardWidth = width
+        self.boardHeight = height
+        
+        let tileCount = width*height
+        
+        self.correctSolution = Array(repeating: "", count: tileCount)
+        
+        for i in 1...tileCount-1 {
+            correctSolution[i-1] = String(i)
+        }
+        
+        correctSolution[tileCount-1] = ""
+        
+        self.gameBoard = Array(repeating: Array(repeating: "", count: width), count: height)
+    }
     
     func startGame() {
         var boardToShuffle = correctSolution.shuffled()
         
         var k = 0;
         
-        for i in 0...3 {
-            for j in 0...3 {
+        for i in 0...boardHeight-1 {
+            for j in 0...boardWidth-1 {
                 gameBoard[i][j] = boardToShuffle[k];
                 k += 1;
             }
         }
     }
-    
     
     func move(row clickedRow: Int, col clickedCol: Int) -> Bool {
         var emptyCell = getEmptyCoordinates();
@@ -70,8 +89,8 @@ class Game {
     func getEmptyCoordinates() -> [Int] {
         var coordinates: [Int] = Array(repeating: 0, count: 2)
     
-        for i in 0...3 {
-            for j in 0...3 {
+        for i in 0...boardHeight-1 {
+            for j in 0...boardWidth-1 {
                 if gameBoard[i][j] == "" {
                     coordinates[0] = i;
                     coordinates[1] = j;
@@ -85,8 +104,8 @@ class Game {
     func isWon() -> Bool {
         var k = 0
     
-        for i in 0...3 {
-            for j in 0...3 {
+        for i in 0...boardHeight-1 {
+            for j in 0...boardWidth-1 {
                 if (gameBoard[i][j] != correctSolution[k]) {
                     return false
                 }
@@ -97,4 +116,6 @@ class Game {
     
         return true
     }
+    
+    
 }

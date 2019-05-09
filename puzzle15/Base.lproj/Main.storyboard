@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yBg-2W-7jy">
+    <device id="retina6_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -11,278 +11,210 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Navigation Controller-->
+        <scene sceneID="hfP-t5-k6P">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="puzzle15" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <navigationController id="0HK-g6-xZP" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sLL-Kz-Ykk">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="qlU-iK-l4q" kind="relationship" relationship="rootViewController" id="YQO-G1-il1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v9y-hz-Rbu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-733" y="-734"/>
+        </scene>
+        <!--New Game-->
+        <scene sceneID="kPy-4g-SR2">
+            <objects>
+                <viewController id="qlU-iK-l4q" customClass="MasterViewController" customModule="puzzle15" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qi3-Vv-jKj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="frq-G1-kSf">
-                                <rect key="frame" x="20" y="40" width="335" height="607"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="Whs-4M-mCa">
+                                <rect key="frame" x="20" y="108" width="374" height="734"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ZUK-gN-OFT">
-                                        <rect key="frame" x="0.0" y="0.0" width="335" height="252"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="9jp-f0-DvQ">
+                                        <rect key="frame" x="86.666666666666671" y="0.0" width="200.66666666666663" height="353"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="rD1-X2-atl">
-                                                <rect key="frame" x="0.0" y="0.0" width="335" height="122"/>
-                                                <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                                <state key="normal" title="NEW GAME">
-                                                    <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="LaG-Xk-TCb">
+                                                <rect key="frame" x="4.3333333333333286" y="0.0" width="192" height="161"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gameboard width" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ZRE-A7-OHa">
+                                                        <rect key="frame" x="0.0" y="0.0" width="192" height="35"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhB-r6-cHl">
+                                                        <rect key="frame" x="88.333333333333343" y="63" width="15.666666666666671" height="35"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3" minimumValue="3" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="HjK-fI-GBm">
+                                                        <rect key="frame" x="49" y="126" width="94" height="29"/>
+                                                        <color key="tintColor" red="1" green="0.4353679419" blue="0.59707885979999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <connections>
+                                                            <action selector="gameboardWidthStepperValueChanged:" destination="qlU-iK-l4q" eventType="valueChanged" id="JJY-pn-Cop"/>
+                                                        </connections>
+                                                    </stepper>
+                                                </subviews>
+                                                <variation key="heightClass=compact-widthClass=regular" spacing="5"/>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="Wbo-Nr-qeU">
+                                                <rect key="frame" x="0.0" y="189" width="200.66666666666666" height="164"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gameboard height" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Gcw-Ge-5Tx">
+                                                        <rect key="frame" x="0.0" y="0.0" width="200.66666666666666" height="36"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RdI-db-y0r">
+                                                        <rect key="frame" x="92.666666666666671" y="64" width="15.666666666666671" height="36"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3" minimumValue="3" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="taF-ZG-Xxc">
+                                                        <rect key="frame" x="53.333333333333329" y="128" width="93.999999999999986" height="29"/>
+                                                        <color key="tintColor" red="1" green="0.43529411764705883" blue="0.59607843137254901" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <connections>
+                                                            <action selector="gameboardHeightStepperValueChanged:" destination="qlU-iK-l4q" eventType="valueChanged" id="pfG-Pn-ng4"/>
+                                                        </connections>
+                                                    </stepper>
+                                                </subviews>
+                                                <variation key="heightClass=compact-widthClass=regular" spacing="5"/>
+                                            </stackView>
+                                        </subviews>
+                                        <variation key="heightClass=compact-widthClass=regular" axis="horizontal"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="i6b-Qm-OZ8">
+                                        <rect key="frame" x="27" y="381" width="320" height="353"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Theme" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="inX-2h-gpB">
+                                                <rect key="frame" x="122.33333333333334" y="0.0" width="75.666666666666657" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VZU-vX-ibK">
+                                                <rect key="frame" x="0.0" y="56.666666666666629" width="320" height="216"/>
+                                            </pickerView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g1y-Aj-6g6">
+                                                <rect key="frame" x="75" y="299" width="170" height="54"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                <state key="normal" title="Start Game">
+                                                    <color key="titleColor" red="1" green="0.43529411764705883" blue="0.59607843137254901" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
-                                                <variation key="heightClass=compact-widthClass=compact">
-                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                </variation>
                                                 <connections>
-                                                    <action selector="newGameTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="40d-cc-noV"/>
+                                                    <segue destination="BYZ-38-t0r" kind="showDetail" identifier="StartGame" id="M4h-VF-nxL"/>
                                                 </connections>
                                             </button>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="tH3-cA-AUQ">
-                                                <rect key="frame" x="0.0" y="130" width="335" height="122"/>
-                                                <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="tW3-rR-ZV2">
-                                                        <rect key="frame" x="0.0" y="0.0" width="163.5" height="122"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🔀" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JPH-1J-TVM">
-                                                                <rect key="frame" x="0.0" y="0.0" width="163.5" height="61"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="88" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CoE-V9-hnP">
-                                                                <rect key="frame" x="0.0" y="61" width="163.5" height="61"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                        </subviews>
-                                                    </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="zXd-lN-d4y">
-                                                        <rect key="frame" x="171.5" y="0.0" width="163.5" height="122"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="⏱" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lFs-y2-cMI">
-                                                                <rect key="frame" x="0.0" y="0.0" width="163.5" height="57"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uoR-xE-TDl">
-                                                                <rect key="frame" x="0.0" y="65" width="163.5" height="57"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                        </subviews>
-                                                    </stackView>
-                                                </subviews>
-                                                <variation key="heightClass=regular-widthClass=compact" axis="horizontal"/>
-                                            </stackView>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="yAp-mt-hDr">
-                                        <rect key="frame" x="0.0" y="292" width="335" height="315"/>
+                                </subviews>
+                                <variation key="heightClass=compact-widthClass=compact" axis="horizontal"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Whs-4M-mCa" firstAttribute="leading" secondItem="8p5-t6-kty" secondAttribute="leading" constant="20" id="5h7-OQ-gZ3"/>
+                            <constraint firstItem="8p5-t6-kty" firstAttribute="trailing" secondItem="Whs-4M-mCa" secondAttribute="trailing" constant="20" id="GQv-xI-SLr"/>
+                            <constraint firstItem="Whs-4M-mCa" firstAttribute="centerX" secondItem="8p5-t6-kty" secondAttribute="centerX" id="Kuf-vb-lhE"/>
+                            <constraint firstItem="8p5-t6-kty" firstAttribute="bottom" secondItem="Whs-4M-mCa" secondAttribute="bottom" constant="20" id="N79-2K-UyH"/>
+                            <constraint firstItem="Whs-4M-mCa" firstAttribute="centerY" secondItem="8p5-t6-kty" secondAttribute="centerY" id="N8p-la-O4y"/>
+                            <constraint firstItem="Whs-4M-mCa" firstAttribute="top" secondItem="8p5-t6-kty" secondAttribute="top" constant="20" id="gkN-84-ybb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8p5-t6-kty"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="New Game" id="c88-eL-HiC"/>
+                    <connections>
+                        <outlet property="gameboardHeightCountLabel" destination="RdI-db-y0r" id="R9l-6j-9g1"/>
+                        <outlet property="gameboardHeightStepper" destination="taF-ZG-Xxc" id="pbC-l6-tyv"/>
+                        <outlet property="gameboardWidthCountLabel" destination="mhB-r6-cHl" id="q5O-Sl-Zai"/>
+                        <outlet property="gameboardWidthStepper" destination="HjK-fI-GBm" id="4xY-Gs-FDq"/>
+                        <outlet property="startGameButton" destination="g1y-Aj-6g6" id="zD5-RM-Ecm"/>
+                        <outlet property="themePickerView" destination="VZU-vX-ibK" id="HT5-FA-lwK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q2w-zU-fXX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="169.56521739130437" y="-734.59821428571422"/>
+        </scene>
+        <!--Split View Controller-->
+        <scene sceneID="e9f-c4-gd8">
+            <objects>
+                <splitViewController id="yBg-2W-7jy" customClass="SplitViewController" customModule="puzzle15" customModuleProvider="target" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="0HK-g6-xZP" kind="relationship" relationship="masterViewController" id="kpY-2Q-IGl"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="detailViewController" id="irL-hk-igA"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZGX-j6-ciR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1683" y="-408"/>
+        </scene>
+        <!--Puzzle View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="PuzzleViewController" customModule="puzzle15" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="frq-G1-kSf">
+                                <rect key="frame" x="20" y="108" width="374" height="734"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="tH3-cA-AUQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="357"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="iIs-Bo-3TJ">
-                                                <rect key="frame" x="0.0" y="0.0" width="335" height="73"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="tW3-rR-ZV2">
+                                                <rect key="frame" x="0.0" y="0.0" width="183" height="357"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iAN-DM-GNm">
-                                                        <rect key="frame" x="0.0" y="0.0" width="78" height="73"/>
-                                                        <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                                        <state key="normal" title="1">
-                                                            <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="puzzleButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mR3-eQ-cMC"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yod-7A-sBd">
-                                                        <rect key="frame" x="86" y="0.0" width="77.5" height="73"/>
-                                                        <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                                        <state key="normal" title="2">
-                                                            <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="puzzleButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zCg-Wm-Inr"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D6P-5G-NJ7">
-                                                        <rect key="frame" x="171.5" y="0.0" width="78" height="73"/>
-                                                        <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                                        <state key="normal" title="3">
-                                                            <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="puzzleButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cQe-E9-Vwi"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ilj-yh-6Lw">
-                                                        <rect key="frame" x="257.5" y="0.0" width="77.5" height="73"/>
-                                                        <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                                        <state key="normal" title="4">
-                                                            <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="puzzleButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tkV-Q4-Y4Y"/>
-                                                        </connections>
-                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🔀" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JPH-1J-TVM">
+                                                        <rect key="frame" x="0.0" y="0.0" width="183" height="178.66666666666666"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="88" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CoE-V9-hnP">
+                                                        <rect key="frame" x="0.0" y="178.66666666666669" width="183" height="178.33333333333331"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="BZN-HR-eq2">
-                                                <rect key="frame" x="0.0" y="81" width="335" height="72.5"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="zXd-lN-d4y">
+                                                <rect key="frame" x="191" y="0.0" width="183" height="357"/>
                                                 <subviews>
-                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R5I-Da-GUC">
-                                                        <rect key="frame" x="0.0" y="0.0" width="78" height="72.5"/>
-                                                        <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                                        <state key="normal" title="5">
-                                                            <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="puzzleButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PTR-dL-xot"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aT6-DV-F4N">
-                                                        <rect key="frame" x="86" y="0.0" width="77.5" height="72.5"/>
-                                                        <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                                        <state key="normal" title="6">
-                                                            <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="puzzleButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Eel-Z8-haQ"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="37M-wa-sKb">
-                                                        <rect key="frame" x="171.5" y="0.0" width="78" height="72.5"/>
-                                                        <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                                        <state key="normal" title="7">
-                                                            <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="puzzleButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ape-gQ-r8H"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RKf-Sf-fMi">
-                                                        <rect key="frame" x="257.5" y="0.0" width="77.5" height="72.5"/>
-                                                        <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                                        <state key="normal" title="8">
-                                                            <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="puzzleButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZpX-bu-NsE"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="0G7-3M-aRg">
-                                                <rect key="frame" x="0.0" y="161.5" width="335" height="73"/>
-                                                <subviews>
-                                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SeY-tz-oAI">
-                                                        <rect key="frame" x="0.0" y="0.0" width="78" height="73"/>
-                                                        <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                                        <state key="normal" title="9">
-                                                            <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="puzzleButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b9I-mX-4PT"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lcQ-8d-MML">
-                                                        <rect key="frame" x="86" y="0.0" width="77.5" height="73"/>
-                                                        <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                                        <state key="normal" title="10">
-                                                            <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="puzzleButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D8x-v4-P8E"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dx0-CQ-KYU">
-                                                        <rect key="frame" x="171.5" y="0.0" width="78" height="73"/>
-                                                        <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                                        <state key="normal" title="11">
-                                                            <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="puzzleButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LEg-dl-u0o"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NdO-vD-WJG">
-                                                        <rect key="frame" x="257.5" y="0.0" width="77.5" height="73"/>
-                                                        <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                                        <state key="normal" title="12">
-                                                            <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="puzzleButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3ED-hG-kYr"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="tAI-oD-cUv">
-                                                <rect key="frame" x="0.0" y="242.5" width="335" height="72.5"/>
-                                                <subviews>
-                                                    <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HTY-lv-K18">
-                                                        <rect key="frame" x="0.0" y="0.0" width="78" height="72.5"/>
-                                                        <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                                        <state key="normal" title="13">
-                                                            <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="puzzleButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kua-Os-vWe"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nft-ic-BSJ">
-                                                        <rect key="frame" x="86" y="0.0" width="77.5" height="72.5"/>
-                                                        <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                                        <state key="normal" title="14">
-                                                            <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="puzzleButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VfO-3H-UAb"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="39v-7n-uXY">
-                                                        <rect key="frame" x="171.5" y="0.0" width="78" height="72.5"/>
-                                                        <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                                        <state key="normal" title="15">
-                                                            <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="puzzleButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x72-pV-UBX"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Rd-T3-SVm">
-                                                        <rect key="frame" x="257.5" y="0.0" width="77.5" height="72.5"/>
-                                                        <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                                        <state key="normal">
-                                                            <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="puzzleButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V2c-fJ-1Ft"/>
-                                                        </connections>
-                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="⏱" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lFs-y2-cMI">
+                                                        <rect key="frame" x="0.0" y="0.0" width="183" height="174.66666666666666"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uoR-xE-TDl">
+                                                        <rect key="frame" x="0.0" y="182.66666666666669" width="183" height="174.33333333333331"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
+                                        <variation key="heightClass=regular-widthClass=compact" axis="horizontal"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="yAp-mt-hDr">
+                                        <rect key="frame" x="0.0" y="377" width="374" height="357"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="yAp-mt-hDr" secondAttribute="height" multiplier="1:1" constant="20" id="DTg-TL-U7t"/>
+                                            <constraint firstAttribute="width" secondItem="yAp-mt-hDr" secondAttribute="height" multiplier="1:1" id="6I6-mC-1Dh"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
@@ -293,39 +225,26 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="frq-G1-kSf" secondAttribute="bottom" constant="20" id="C29-zs-K3U"/>
-                            <constraint firstItem="frq-G1-kSf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Z9u-QB-Yyc"/>
-                            <constraint firstItem="frq-G1-kSf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="ul2-SW-X1l"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="frq-G1-kSf" secondAttribute="trailing" constant="20" id="vVA-DP-3L2"/>
+                            <constraint firstItem="frq-G1-kSf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="J0G-dx-ItA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="frq-G1-kSf" secondAttribute="bottom" constant="20" id="UWa-B5-574"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="frq-G1-kSf" secondAttribute="trailing" constant="20" id="m15-kD-8b4"/>
+                            <constraint firstItem="frq-G1-kSf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="vjD-e2-0VN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="containerStack" destination="frq-G1-kSf" id="8IC-9s-hvj"/>
+                        <outlet property="gameBoard" destination="yAp-mt-hDr" id="FQZ-OL-Y0T"/>
                         <outlet property="moveCountLabel" destination="CoE-V9-hnP" id="Euc-b0-pMP"/>
-                        <outlet property="newGameButton" destination="rD1-X2-atl" id="5TV-oz-WHm"/>
                         <outlet property="timeLabel" destination="uoR-xE-TDl" id="ivG-A2-fbH"/>
-                        <outletCollection property="puzzleButtons" destination="iAN-DM-GNm" collectionClass="NSMutableArray" id="WIc-ms-Xfd"/>
-                        <outletCollection property="puzzleButtons" destination="Yod-7A-sBd" collectionClass="NSMutableArray" id="cF0-ND-sFS"/>
-                        <outletCollection property="puzzleButtons" destination="D6P-5G-NJ7" collectionClass="NSMutableArray" id="Apf-Qn-PWk"/>
-                        <outletCollection property="puzzleButtons" destination="ilj-yh-6Lw" collectionClass="NSMutableArray" id="iBX-fY-AvW"/>
-                        <outletCollection property="puzzleButtons" destination="R5I-Da-GUC" collectionClass="NSMutableArray" id="wl9-Bt-DB2"/>
-                        <outletCollection property="puzzleButtons" destination="37M-wa-sKb" collectionClass="NSMutableArray" id="UNl-O2-xWL"/>
-                        <outletCollection property="puzzleButtons" destination="RKf-Sf-fMi" collectionClass="NSMutableArray" id="QrI-PW-7Ed"/>
-                        <outletCollection property="puzzleButtons" destination="aT6-DV-F4N" collectionClass="NSMutableArray" id="OPq-TQ-qHY"/>
-                        <outletCollection property="puzzleButtons" destination="SeY-tz-oAI" collectionClass="NSMutableArray" id="ChS-Px-lnj"/>
-                        <outletCollection property="puzzleButtons" destination="lcQ-8d-MML" collectionClass="NSMutableArray" id="pO6-CF-mPd"/>
-                        <outletCollection property="puzzleButtons" destination="Dx0-CQ-KYU" collectionClass="NSMutableArray" id="NcV-BP-5Df"/>
-                        <outletCollection property="puzzleButtons" destination="NdO-vD-WJG" collectionClass="NSMutableArray" id="1Le-mC-HwE"/>
-                        <outletCollection property="puzzleButtons" destination="HTY-lv-K18" collectionClass="NSMutableArray" id="IYm-25-Cmh"/>
-                        <outletCollection property="puzzleButtons" destination="Nft-ic-BSJ" collectionClass="NSMutableArray" id="FKn-bR-fFA"/>
-                        <outletCollection property="puzzleButtons" destination="39v-7n-uXY" collectionClass="NSMutableArray" id="xsh-T2-d18"/>
-                        <outletCollection property="puzzleButtons" destination="2Rd-T3-SVm" collectionClass="NSMutableArray" id="gE7-jv-h8o"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="15" y="38.75"/>
+            <point key="canvasLocation" x="14.572864321608041" y="38.129496402877699"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="M4h-VF-nxL"/>
+    </inferredMetricsTieBreakers>
 </document>

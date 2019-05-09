@@ -8,21 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		64204100225F3F0F001FE2C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642040FF225F3F0F001FE2C7 /* AppDelegate.swift */; };
-		64204102225F3F0F001FE2C7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64204101225F3F0F001FE2C7 /* ViewController.swift */; };
 		64204105225F3F0F001FE2C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64204103225F3F0F001FE2C7 /* Main.storyboard */; };
 		64204107225F3F11001FE2C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64204106225F3F11001FE2C7 /* Assets.xcassets */; };
 		6420410A225F3F11001FE2C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64204108225F3F11001FE2C7 /* LaunchScreen.storyboard */; };
+		643432432281B5C000EC99A2 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643432422281B5C000EC99A2 /* MasterViewController.swift */; };
+		643432452281B67200EC99A2 /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643432442281B67200EC99A2 /* SplitViewController.swift */; };
+		643432472281B7AB00EC99A2 /* PuzzleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643432462281B7AB00EC99A2 /* PuzzleViewController.swift */; };
 		646FB0F0226C6F8400726742 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646FB0EF226C6F8400726742 /* Game.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		642040FC225F3F0F001FE2C7 /* puzzle15.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = puzzle15.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		642040FF225F3F0F001FE2C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		64204101225F3F0F001FE2C7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		64204104225F3F0F001FE2C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		64204106225F3F11001FE2C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		64204109225F3F11001FE2C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6420410B225F3F11001FE2C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		643432422281B5C000EC99A2 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		643432442281B67200EC99A2 /* SplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
+		643432462281B7AB00EC99A2 /* PuzzleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleViewController.swift; sourceTree = "<group>"; };
 		646FB0EF226C6F8400726742 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -57,9 +61,11 @@
 			isa = PBXGroup;
 			children = (
 				64204111225F3F37001FE2C7 /* Project Files */,
-				64204101225F3F0F001FE2C7 /* ViewController.swift */,
+				643432422281B5C000EC99A2 /* MasterViewController.swift */,
 				646FB0EF226C6F8400726742 /* Game.swift */,
 				64204103225F3F0F001FE2C7 /* Main.storyboard */,
+				643432462281B7AB00EC99A2 /* PuzzleViewController.swift */,
+				643432442281B67200EC99A2 /* SplitViewController.swift */,
 				6420410B225F3F11001FE2C7 /* Info.plist */,
 			);
 			path = puzzle15;
@@ -146,8 +152,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				64204102225F3F0F001FE2C7 /* ViewController.swift in Sources */,
+				643432452281B67200EC99A2 /* SplitViewController.swift in Sources */,
+				643432432281B5C000EC99A2 /* MasterViewController.swift in Sources */,
 				646FB0F0226C6F8400726742 /* Game.swift in Sources */,
+				643432472281B7AB00EC99A2 /* PuzzleViewController.swift in Sources */,
 				64204100225F3F0F001FE2C7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
