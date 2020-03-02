@@ -41,6 +41,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		64132E80240D4C5100E80726 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				643432422281B5C000EC99A2 /* MasterViewController.swift */,
+				643432462281B7AB00EC99A2 /* PuzzleViewController.swift */,
+				643432442281B67200EC99A2 /* SplitViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		64132E81240D4C9A00E80726 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				646FB0EF226C6F8400726742 /* Game.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		64132E82240D4CA500E80726 /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				64204103225F3F0F001FE2C7 /* Main.storyboard */,
+				64204106225F3F11001FE2C7 /* Assets.xcassets */,
+				64204108225F3F11001FE2C7 /* LaunchScreen.storyboard */,
+				6420410B225F3F11001FE2C7 /* Info.plist */,
+				642040FF225F3F0F001FE2C7 /* AppDelegate.swift */,
+			);
+			path = SupportFiles;
+			sourceTree = "<group>";
+		};
 		642040F3225F3F0F001FE2C7 = {
 			isa = PBXGroup;
 			children = (
@@ -60,25 +90,11 @@
 		642040FE225F3F0F001FE2C7 /* puzzle15 */ = {
 			isa = PBXGroup;
 			children = (
-				64204111225F3F37001FE2C7 /* Project Files */,
-				643432422281B5C000EC99A2 /* MasterViewController.swift */,
-				646FB0EF226C6F8400726742 /* Game.swift */,
-				64204103225F3F0F001FE2C7 /* Main.storyboard */,
-				643432462281B7AB00EC99A2 /* PuzzleViewController.swift */,
-				643432442281B67200EC99A2 /* SplitViewController.swift */,
-				6420410B225F3F11001FE2C7 /* Info.plist */,
+				64132E82240D4CA500E80726 /* SupportFiles */,
+				64132E81240D4C9A00E80726 /* Models */,
+				64132E80240D4C5100E80726 /* Controllers */,
 			);
 			path = puzzle15;
-			sourceTree = "<group>";
-		};
-		64204111225F3F37001FE2C7 /* Project Files */ = {
-			isa = PBXGroup;
-			children = (
-				642040FF225F3F0F001FE2C7 /* AppDelegate.swift */,
-				64204106225F3F11001FE2C7 /* Assets.xcassets */,
-				64204108225F3F11001FE2C7 /* LaunchScreen.storyboard */,
-			);
-			path = "Project Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

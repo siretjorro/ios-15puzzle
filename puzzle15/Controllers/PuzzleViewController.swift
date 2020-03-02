@@ -13,10 +13,6 @@ class PuzzleViewController: UIViewController {
     
     var noOfMoves: Int = 0
     
-//    var gameboardWidth = 3
-//
-//    var gameboardHeight = 3
-    
     var puzzleButtons: [UIButton] = [UIButton]()
     
     var themes: [String: [String : UIColor]] = ["Light": ["background" : UIColor(red:1.00, green:1.00, blue:1.00, alpha:1.0), "labeltext" : UIColor.darkGray, "buttonbackground" : UIColor(red:0.97, green:0.72, blue:1.00, alpha:1.0), "buttontext" : UIColor(red:0.39, green:0.39, blue:0.39, alpha:1.0)], "Dark": ["background" : UIColor(red:0.39, green:0.39, blue:0.39, alpha:1.0), "labeltext" : UIColor(red:0.91, green:0.91, blue:0.91, alpha:1.0), "buttonbackground" : UIColor(red:0.93, green:0.93, blue:0.93, alpha:1.0), "buttontext" : UIColor(red:1.00, green:1.00, blue:1.00, alpha:1.0)]]
@@ -34,32 +30,16 @@ class PuzzleViewController: UIViewController {
     
     @IBOutlet weak var timeLabel: UILabel!
     
-    var seconds = 0 //This variable will hold a starting value of seconds. It could be any amount above 0.
+    var seconds = 0
     var timer = Timer()
-    var isTimerRunning = false //This will be used to make sure only one timer is created at a time.
+    var isTimerRunning = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
-        //        if UIDevice.current.model == "iPhone4,1" || UIDevice.current.model == "iPhone6,1" {
-        //            UILabel.appearance().font = UIFont.systemFont(ofSize: 1)
-        //        }
-        
-//        game = Game(width: gameboardWidth, height: gameboardHeight)
         puzzleButtons = Array(repeating: UIButton.init(), count: game.boardWidth * game.boardHeight)
     
         newGame()
     }
-    
-//    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-//        super.viewWillTransition(to: size, with: coordinator)
-//        if UIDevice.current.orientation.isLandscape {
-//            containerStack.axis = NSLayoutConstraint.Axis.horizontal
-//        } else {
-//            containerStack.axis = NSLayoutConstraint.Axis.vertical
-//        }
-//    }
     
     func runTimer() {
         timer = Timer.scheduledTimer(timeInterval: 1, target: self,   selector: (#selector(PuzzleViewController.updateTimer)), userInfo: nil, repeats: true)
