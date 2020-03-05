@@ -87,6 +87,13 @@ class MasterViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         }
     }
     
+    func changeTheme(UIColor backgroundColor, UIColor labelTextColor, UIColor buttonBackgroundColor, UIColor buttonTextColor) {
+        vc.backgroundColor = backgroundColor
+        vc.labelTextColor = labelTextColor
+        vc.buttonBackgroundColor = buttonBackgroundColor
+        vc.buttonTextColor = buttonTextColor
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
